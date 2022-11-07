@@ -1,0 +1,303 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+html::-webkit-scrollbar {
+    width: 7.5px;
+}
+
+html::-webkit-scrollbar-thumb {
+    background: rgb(35, 37, 43, .7);
+}
+
+html::-webkit-scrollbar-track {
+    background: #dde;
+}
+
+
+body {
+    font-size: 10px;
+    width: 100vw;
+    overflow-x: hidden;
+}
+
+.scroll-down header {
+    transform: translate3d(0, -100%, 0);
+}
+
+.scroll-up header {
+    filter: drop-shadow(0 -10px -20px rgb(170, 170, 170));
+    -webkit-filter: drop-shadow(0 -10px -20px rgb(170, 170, 170));
+    -moz-filter: drop-shadow(0 -10px -20px rgb(170, 170, 170));
+    -o-filter: drop-shadow(0 -10px -20px rgb(170, 170, 170));
+    -ms-filter: drop-shadow(0 -10px -20px rgb(170, 170, 170));
+}
+
+/* header css début */
+
+
+header {
+    z-index: 999;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #232528;
+    box-shadow: 0 5px 25px rgb(0 0 0 / 20%);
+    padding: 0 80px;
+    transition: .6s;
+}
+
+/* logo */
+
+.logo {
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+}
+
+.logo > div {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    /* display: block; */
+    /* background: url(icones/oikos-logos.svg) center center / cover no-repeat; */
+    width: 80px;
+    /* height: 70px; */
+    /* padding: 0 50px; */
+    transform: scale(1.5);
+}
+
+.logo a {
+    color: #fff;
+    font-size: 2em;
+    font-weight: 500;
+    text-decoration: none;
+    letter-spacing: 2px;
+    user-select: none;
+}
+
+/* navbar */
+
+.nav {
+    position: relative;
+    line-height: 50px;
+}
+
+.nav .menu {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    user-select: none;
+}
+
+.menu-item > a {
+    color: #fff;
+    font-size: 1.7em;
+    text-decoration: none;
+    margin: 20px;
+    padding: 25px 0;
+}
+
+.menu-item > a:hover {
+    color: #469dff;
+    transition: .3s;
+}
+
+.menu-item .sub-menu {
+    position: absolute;
+    background: #232528;
+    top: 50px;
+    line-height: 40px;
+    list-style: none;
+    border-radius: 0 0 8px 8px;
+    box-shadow: 0 5px 25px rgb(0 0 0 / 20%);
+    pointer-events: none;
+    transform: translateY(20px);
+    opacity: 0;
+    transition: .3s;
+    transition-property: transform, opacity;
+}
+
+.menu-item:hover .sub-menu {
+    pointer-events: all;
+    transform: translateY(0);
+    opacity: 1;
+}
+
+.menu-item .sub-menu .sub-item {
+    position: relative;
+    padding: 7px 0;
+    cursor: pointer;
+    box-shadow: inset 0px -30px 5px -30px rgba(255, 255, 255, .1);
+}
+
+.menu-item .sub-menu .sub-item > a {
+    color: #fff;
+    font-size: 1.2em;
+    text-decoration: none;
+    padding: 15px 30px;
+}
+
+.menu-item .sub-menu .sub-item:hover {
+    background: #4080ef;
+}
+
+.menu-item .sub-menu .sub-item:last-child {
+    border-radius: 0 0 8px 8px;
+}
+
+.menu-btn {
+    display: none;
+}
+
+
+/* responsive nav */
+
+@media screen and (max-width:1030px) {
+
+    .nav .menu {
+        position: fixed;
+        display: block;
+        background: rgb(35, 37, 43, .9);
+        min-width: 350px;
+        height: 100vh;
+        top: 0;
+        right: -100%;
+        padding: 90px 50px;
+        visibility: hidden;
+        overflow-y: auto;
+        text-align: center;
+        transition: .5s;
+        transition-property: right, visibility;
+    }
+
+    .nav .menu.show-nav {
+        right: 0;
+        visibility: visible;
+    }
+
+    .menu-item {
+        position: relative;
+    }
+
+    .menu-item > a:hover {
+        letter-spacing: .5em;
+    }
+
+    .menu-item .sub-menu {
+        opacity: 1;
+        position: relative;
+        top: 0;
+        transform: translateX(10px);
+        background: rgba(255, 255, 255, .1);
+        border-radius: 5px;
+        overflow: hidden;
+        height: 0;
+        visibility: hidden;
+        transition: .3s;
+        transition-property: visibility, height;
+    }
+
+    @keyframes slide {
+        0% {
+            transform: translateY(4px);
+        }
+        50% {
+            transform: translateY(2px);
+        }
+        100% {
+            transform: translateY(0);
+        }
+    }
+
+    .menu-item .sub-menu.active {
+        visibility: visible;
+        height: 100%;
+        animation: slide 3s;
+    }
+
+    .menu-item:hover .sub-menu {
+        transform: translateX(10px);
+    }
+
+    .menu-item .sub-menu .sub-item {
+        box-shadow: none;
+    }
+
+    .menu-item .sub-menu .sub-item:hover {
+        background: none;
+    }
+
+    .menu-item .sub-menu .sub-item a:hover {
+        color: #4080ef;
+        transition: .3s;
+    }
+
+    .menu-btn {
+        position: relative;
+        width: 38px;
+        height: 35px;
+        background: transparent;
+        border: none;
+        cursor: pointer;
+        display: block;
+    }
+
+    .bar {
+        display: block;
+        width: 38px;
+        height: 4px;
+        border-radius: 3px;
+        background: #fff;
+        transition: all .5s ease-in-out;
+    }
+
+    .bar::before, .bar::after {
+        content: '';
+        width: 38px;
+        height: 4px;
+        position: absolute;
+        left: 0;
+        background: #fff;
+        border-radius: 3px;
+        transition: all .5s ease-in-out;
+    }
+
+    .bar::before {
+        transform: translateY(-10px);
+    }
+
+    .bar::after {
+        transform: translateY(10px);
+    }
+
+    .active .bar {
+        width: 0;
+        background: transparent;
+    }
+
+    .active .bar::before {
+        transform: rotate(45deg);
+    }
+
+    .active .bar::after {
+        transform: rotate(-45deg);
+    }
+
+
+    header {
+        padding: 10px 15px;
+    }
+}
+
+/* header css fin */

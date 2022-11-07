@@ -1,0 +1,116 @@
+.main-site {
+    position: relative;
+    top: 70px;
+    color: #334;
+    font-size: 12px;
+    margin-bottom: 10%;
+}
+
+main > section {
+    min-width: 100vw;
+    min-height: fit-content;
+}
+
+.main-site > section {
+    padding: 2% 2rem;
+}
+
+.main-intro {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 200px;
+    text-align: center;
+    color: #fff;
+    background: linear-gradient(to left, rgb(51, 51, 51, .5), #3334), url(images/bannieres/banniere1.jpg) center center / cover no-repeat;
+}
+
+.titre_accueil {
+    font-size: 2em;
+    font-family: fantasy;
+    font-weight: normal;
+}
+
+.bouton_accueil {
+    text-align: center;
+    padding-top: 2%;
+}
+
+.bouton_accueil .boutton {
+    padding: 5px 10px;
+    border-radius: 5%;
+    border-style: none;
+    border: solid 1px #fff;
+    background: #fff;
+    color: #334;
+    margin-right: 5%;
+    cursor: pointer;
+    user-select: none;
+    text-decoration: none;
+}
+
+.bouton_accueil .boutton:last-of-type {
+    background: #6696a6;
+    border: solid 1px #6696a6;
+    color: #fff;
+    margin-right: 0;
+    transition: .2s;
+    transition-property: color;
+}
+
+.bouton_accueil .boutton:last-of-type:hover {
+    background: #fff;
+    color: #334;
+}
+
+.main_banniere {
+    display: flex;
+    align-items: center;
+    background: #87ceeb4d;
+    user-select: none;
+    /* width: 390px; */
+    width: 100%;
+    margin: 5% auto;
+}
+
+.main_banniere img {
+    width: 230px;
+    width: 60%;
+    height: 150px;
+}
+
+.main_banniere img:first-of-type {
+    transform: skewX(20deg) rotateX(40deg);
+    /*  */
+    width: 40%;
+}
+
+
+
+
+@media screen and (min-width:800px) {
+    .main-site {
+        font-size: 15px;
+    }
+
+    .first-section {
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+
+    .main-intro {
+        width: 80%;
+        height: 250px;
+        margin: auto;
+        background: linear-gradient(to left, rgb(51, 51, 51, .5), #3334), url(images/bannieres/banniere11.jpg) center center / cover no-repeat;
+    }
+
+    .main_banniere {
+        margin: 0;
+        width: 60%;
+        height: 250px;
+        border-radius: 100%;
+    }
+
+}

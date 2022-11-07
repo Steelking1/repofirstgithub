@@ -1,0 +1,155 @@
+
+.search {
+    position:relative;
+    width: 45px;
+    height: 45px;
+    left: 5%;
+    border-radius: 45px;
+    transition: .5s;
+    overflow: hidden;
+}
+
+.search.active {
+    width: 360px;
+    height: 40px;
+    background: #fff;
+}
+
+.search .icon {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 3.75em;
+    height: 3.75em;
+    border-radius: 45px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.search .icon::before {
+    content: '';
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    border: 3px solid #fff;
+    border-radius: 50%;
+    transform: translate(-2px, 2px);
+}
+
+.search .icon::after {
+    content: '';
+    position: absolute;
+    width: 2.25px;
+    height: 9px;
+    background:#fff;
+    transform: translate(9px, 9px) rotate(315deg);
+}
+
+.search.active .icon {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 15px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.search.active .icon::before {
+    content: '';
+    width: 2px;
+    height: 25px;
+    background: #999;
+    border: none;
+    border-radius: 0;
+    transform: rotate(45deg);
+}
+
+.search.active .icon::after {
+    content: '';
+    width: 2px;
+    height: 25px;
+    background: #999;
+    transform: rotate(315deg);
+}
+
+.search form {
+    position: relative;
+    left: 45px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 300px;
+    height: 40px;
+}
+
+.search form input {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    font-size: 1.4em;
+    font-style: italic;
+    border: none;
+    outline: none;
+    padding: 10px 0;
+}
+
+.btn {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    font-size: 3.1em;
+    width: 20%;
+    color: #fff;
+    background: rgb(51, 51, 221, .5);
+    border: solid 1px #ddd;
+    border-radius: 45px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translateX(15px);
+    transition: .3s;
+    transition-property: color;
+}
+
+.btn:hover {
+    background: rgb(51, 51, 221, .7);
+    color: #334;
+    transition: .3s;
+    transition-property: color;
+}
+
+
+@media screen and (max-width:1055px) {
+   
+    .search, .btn {
+        border-radius: 0;
+    }
+
+    .search.active {
+        position: absolute;
+        top: 60px;
+        right: 0;
+        left: 0;
+        width: 290px;
+        margin: auto;
+        border: solid 1px rgb(51 51 68/60%);
+        box-shadow: 0 0 1px rgb(51 51 68);
+        transition: .2s;
+    }
+
+    .search.active:hover {
+        border: solid 1px #ddd;
+        box-shadow: 0 0 1px blue;
+    }
+
+    .search form {
+        width: 230px;
+    }
+}

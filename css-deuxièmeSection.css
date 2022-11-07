@@ -1,0 +1,158 @@
+
+/* article 1 */
+.container-recent-article {
+    width: 100%;
+    height: 200px;
+    background: linear-gradient(to left, rgb(51, 51, 51, .5), #3334), url(images/terrain.jpg) center center / cover no-repeat;
+    margin: 1% auto;
+    border: solid #dde 1px;
+    /* */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #f0f0f0;
+    text-decoration: none;
+}
+    
+.container-recent-article:hover {
+    transform: scale(.95);
+    transition: .2s;
+}
+
+.flex {
+    display: flex;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.container-recent-article.block-1, .container-recent-article.block-2 {
+    height: 130px;
+    margin: 0 1% 1% 0;
+    background: linear-gradient(rgb(51, 51, 51, .8), #3334), url(images/Comptabilité-V2.jpg) center center / cover no-repeat;
+}
+
+.container-recent-article.block-2 {
+    margin: 0;
+    background: linear-gradient(to left, rgb(51, 51, 51, .5), #3334), url(images/Slider3.jpg) center center / cover no-repeat;
+}
+
+.container-recent-article h1 {
+    font-size: 15px;
+}
+
+.dateur {
+    font-size: 10px;
+}
+
+    /* article2  */
+
+.second-article {
+    padding: 20px 0;
+}
+
+.container .card {
+    /* width: 400px; */
+    height: 250px;
+    margin: auto;
+    position: relative;
+}
+
+.container .card img {
+    position: absolute;
+}
+
+.container .card:hover::after {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgb(51, 51, 68, .5);
+}
+
+/* article3 */
+
+.last-article h1 {
+    background: #dde;
+    padding: 1%;
+    width: max-content;
+}
+
+.last-article p {
+    text-align: justify;
+    padding: 1% 0;
+}
+
+.container-last-article {
+    list-style: none;
+}
+
+.container-last-article > li {
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding: 7px 0;
+}
+
+.container-last-article > li::after {
+    content: '';
+    display: block;
+    width: 100%;
+    background: #dde;
+    height: 1px;
+    margin: auto;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.container-last-article > li:hover {
+    background: rgb(221, 221, 221, .4);
+    color: #334;
+    cursor: pointer;
+    transition: .2s;
+}
+
+.container-last-article > li img {
+    width: 125px;
+    height: 65px;
+    min-width: 125px;
+    border: solid 1px #dde;
+    border-radius: 5%;
+    margin-right: 5%;
+    user-select: none;
+}
+
+.container-last-article > li img:hover {
+    transform: rotate(1.2deg) scale(.9);
+}
+
+@media screen and (min-width:800px) {
+
+    /* g */
+
+    .recent-top-article {
+        width: 700px;
+        margin: auto;
+    }
+
+    /* last-article */
+    .last-article {
+        width: 750px;
+        margin: auto;
+    }
+
+    .container-last-article {
+        border: solid 1px #dde;
+        padding: 10px;
+        position: relative;
+    }
+
+    .container-last-article > li:last-of-type::after {
+        display: none;
+    }
+    
+}
