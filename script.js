@@ -31,6 +31,13 @@ function headerScript() {
         )
     })
 
+    //bloquer le scroll
+    window.addEventListener('scroll', ()=> {
+        if ( menu.className === 'menu show-nav' ) {
+            window.scrollTo(0,0)
+        }
+    })
+
     //searchbar
 
     const icon = document.querySelector('.icon');

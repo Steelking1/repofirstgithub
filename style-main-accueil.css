@@ -12,7 +12,7 @@ main > section {
 }
 
 .main-site > section {
-    padding: 2% 2rem;
+    padding: 2% 1rem;
 }
 
 .main-intro {
@@ -27,7 +27,7 @@ main > section {
 
 .titre_accueil {
     font-size: 2em;
-    font-family: fantasy;
+    font-family: oswald;
     font-weight: normal;
 }
 
