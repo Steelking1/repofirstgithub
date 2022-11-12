@@ -1,89 +1,3 @@
-@font-face {
-    font-family: oswald ;
-    src: url(font/Oswald-Regular.ttf);
-}
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family:Arial, Helvetica, sans-serif;
-}
-
-html::-webkit-scrollbar {
-    width: 7.5px;
-}
-
-html::-webkit-scrollbar-thumb {
-    background: rgb(35, 37, 43, .7);
-}
-
-html::-webkit-scrollbar-track {
-    background: #dde;
-}
-
-
-/* reset */
-
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	font: inherit;
-	vertical-align: baseline;
-}
-/* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, 
-footer, header, hgroup, menu, nav, section {
-	display: block;
-}
-
-ol, ul {
-	list-style: none;
-}
-blockquote, q {
-	quotes: none;
-}
-blockquote:before, blockquote:after,
-q:before, q:after {
-	content: '';
-	content: none;
-}
-
-a {
-    text-decoration: none;
-    color: inherit;
-}
-/*  */
-body {
-    font-size: 10px;
-    width: 100vw;
-    overflow-x: hidden;
-}
-
-.scroll-down header {
-    transform: translate3d(0, -100%, 0);
-}
-
-.scroll-up header {
-    filter: drop-shadow(0 -10px -20px rgb(170, 170, 170));
-    -webkit-filter: drop-shadow(0 -10px -20px rgb(170, 170, 170));
-    -moz-filter: drop-shadow(0 -10px -20px rgb(170, 170, 170));
-    -o-filter: drop-shadow(0 -10px -20px rgb(170, 170, 170));
-    -ms-filter: drop-shadow(0 -10px -20px rgb(170, 170, 170));
-}
 
 /* header css début */
 
@@ -151,7 +65,7 @@ header {
 
 .menu-item > a {
     color: #fff;
-    font-size: 1.7em;
+    font-size: 20px;
     text-decoration: none;
     margin: 20px;
     padding: 25px 0;
@@ -192,7 +106,7 @@ header {
 
 .menu-item .sub-menu .sub-item > a {
     color: #fff;
-    font-size: 1.2em;
+    font-size: 14px;
     text-decoration: none;
     padding: 15px 30px;
 }
@@ -241,7 +155,7 @@ header {
     }
 
     .menu-item > a:hover {
-        letter-spacing: .5em;
+        letter-spacing: .15em;
     }
 
     .menu-item .sub-menu {

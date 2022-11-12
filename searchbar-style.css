@@ -3,7 +3,7 @@
     position:relative;
     width: 45px;
     height: 45px;
-    left: 5%;
+    /* left: 5%; */
     border-radius: 45px;
     transition: .5s;
     overflow: hidden;

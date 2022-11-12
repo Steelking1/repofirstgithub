@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="Owl_carousel/owl.carousel.min.css">
     <link rel="stylesheet" href="Owl_carousel/owl.theme.default.min.css">
     <!--  -->
+    <link rel="stylesheet" href="config-css.css">
     <link rel="stylesheet" href="style-1.css">
     <link rel="stylesheet" href="searchbar-style.css">
     <link rel="stylesheet" href="style-main-accueil.css">
@@ -63,7 +64,7 @@
                         dernières enquêtes de oïkonomia
                     </p>
                     <div class="bouton_accueil">
-                        <a href="#contactBlock" class="boutton">Nous contacter</a>
+                        <a href="#" class="boutton toggle-modal">Nous contacter</a>
                         <a href="#" class="boutton">Voir nos formations</a>
                     </div>
                 </div>
@@ -136,7 +137,7 @@
             </article>
             <article class="third-article">
                 <div> 
-                    <h1>Consulter nos recentes analyses sur diverses thématiques</h1>
+                    <h1 class="titre-s">Consulter nos recentes analyses sur diverses thématiques</h1>
                     <p>
                         Etant des chercheurs, nous nous evertuons à mener des recherche
                         sur les thématiques pouvant affecter notre environnement
@@ -273,14 +274,20 @@
                 <img src="icones/vision.svg" alt="">
             </article>
         </section> -->
-        <section class="contact" id="contactBlock">
-            <h1 class="heading">Nous contacter</h1>
-            <form action="traitementForm.php" method="post">
-                <input type="text" placeholder="votre nom complet" class="box" required>
-                <input type="email" placeholder="votre e-mail" class="box" required>
-                <textarea name="" id="" cols="30" rows="10" class="box address" placeholder="Votre message"></textarea>
-                <button type="submit" class="btn">Soumettre</button>
-            </form>  
+        <section class="contact">
+            <div class="modals-container">
+                <div class="overlay"></div>
+                <div class="modales" role="dialog" aria-label="boite-modale">
+                    <h1 class="close-modal toggle-modal" aria-label="close-modal">&#10006;</h1>
+                    <h1 class="heading">Contactez-nous</h1>
+                    <form action="traitementForm.php" method="post">
+                        <input type="text" placeholder="Votre nom complet" class="box" required>
+                        <input type="email" placeholder="Votre e-mail" class="box" required>
+                        <textarea name="" id="" cols="30" rows="10" class="box address" placeholder="Votre message"></textarea>
+                        <button type="submit" class="btn">Soumettre</button>
+                    </form>
+                </div>  
+            </div>
         </section>
     </main>
 
