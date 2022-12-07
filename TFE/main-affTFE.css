@@ -204,7 +204,7 @@ a {
 }
 
 .modales {
-    width: 400px;
+    width: 380px;
     padding: 3em 2em;
     border-radius: 10px;
 }
@@ -323,10 +323,10 @@ a {
     opacity: 0;
 }
 
-.share-a ol li a {
+/* .share-a ol li a {
     background: #fff;
     background: var(--theme-blanc, #fff);
-}
+} */
 
 .share-a.active ol li {
     opacity: 1;
