@@ -166,7 +166,7 @@ function carousel() {
         $('.owl-carousel-art').owlCarousel({
             item: 1,
             autoplay: true,
-            autoplayTimeout: 400000,
+            autoplayTimeout: 2000,
             margin: 2,
             loop: true,
             responsiveClass: true,
@@ -181,20 +181,20 @@ function carousel() {
                 850: {
                 items: 2,
                 autoplay: false,
-                margin: 10,
+                margin: 0,
                 nav: false
                 },
                 1000: {
-                items: 2,
+                items: 3,
                 autoplay: false,
-                margin: 10,
+                margin: 2,
                 nav: false
                 },
                 1100: {
-                items: 3,
+                items: 4,
                 autoplay: false,
                 nav: false,
-                margin: 20
+                margin: 3
                 }
             }
         });

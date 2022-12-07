@@ -30,12 +30,8 @@ header {
     align-items: center;
 }
 
-.logo img {
-    /* display: block; */
-    /* background: url(icones/oikos-logos.svg) center center / cover no-repeat; */
+.logo > img {
     width: 80px;
-    /* height: 70px; */
-    /* padding: 0 50px; */
     transform: scale(1.5);
 }
 
@@ -65,7 +61,7 @@ header {
 
 .menu-item > a {
     color: #fff;
-    font-size: 20px;
+    font-size: 16px;
     text-decoration: none;
     margin: 20px;
     padding: 25px 0;

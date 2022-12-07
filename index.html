@@ -22,16 +22,12 @@
 <body class="scroll-up">
     <header class="header">
         <div class="logo">
-            <div>
-                <img src="icones/oikos-logos.svg" alt="logo_du_site">
-                <!-- <span class="logo-icon"></span> -->
-                <!-- <a href="#">&#x03b8;&#x03b9;&#x03ba;&#x03a6;&#x03b7;&#x03a6;&#x03a0;&#x03b9;&#x03b1;</a> -->
-            </div>
+            <img src="icones/oikos-logos.svg" alt="logo_du_site">
             <div class="search">
                 <div class="icon"></div>
                 <form action="#" method="get" id="form-search">
                     <input type="search" name="searchBar" placeholder="Recherchez sur le site" required>
-                    <button type="submit" name="btnSearchBar" class="btn">&#x2332;</button>
+                    <button type="submit" name="btnSearchBar" class="btn">-</button>
                 </form>
             </div>
         </div>
@@ -44,6 +40,7 @@
                         <li class="sub-item"><a href="#" class="link">Economie monetaire</a></li>
                         <li class="sub-item"><a href="#" class="link">Gestion financière</a></li>
                         <li class="sub-item"><a href="#" class="link">Gestion des ressources humaines</a></li>
+                        <li class="sub-item"><a href="#" class="link">Travaux de recherche</a></li>
                     </ul>
                 </li>
                 <li class="menu-item"><a href="#" class="link">Articles</a></li>
@@ -64,8 +61,8 @@
                         dernières enquêtes de oïkonomia
                     </p>
                     <div class="bouton_accueil">
-                        <a href="#" class="boutton toggle-modal">Nous contacter</a>
-                        <a href="#" class="boutton">Voir nos formations</a>
+                        <a href="#" class="boutton toggle-modal">Joignez-nous</a>
+                        <a href="#" class="boutton">Nos formations</a>
                     </div>
                 </div>
             </article>
@@ -87,31 +84,34 @@
                     </a>
                 </div>
             </article>
-            <article class="second-article">
-                <div class="container owl-carousel-art owl-theme">
-                    <p class="card item">
-                        <img src="images/carousel-1/card1.jpg">
-                    </p>
-                    <p class="card item">
-                        <img src="images/carousel-1/card2.png">
-                    </p>
-                    <p class="card item">
-                        <img src="images/carousel-1/card3.jfif">
-                    </p>
-                    <p class="card item">
-                        <img src="images/carousel-1/card4.jpg">
-                    </p>
-                    <p class="card item">
-                        <img src="images/carousel-1/card5.JPG">
-                    </p>
-                    <p class="card item">
-                        <img src="images/carousel-1/card1.jpg">
-                    </p>
-                    <p class="card item">
-                        <img src="images/carousel-1/card2.png">
-                    </p>
+            <article class="second-article" id="second-article">
+                <div class="title-sec">
+                    <h1>Consulter nos recherches</h1>
                 </div>
                 <div class="container owl-carousel-art owl-theme">
+                    <a href="TFE/AfficheurTFE.html" class="card item">
+                        <img src="images/carousel-1/Le_risque_d-investissement_et_de_rentabilité_des_entreprises_minieres.png">
+                    </a>
+                    <p class="card item">
+                        <img src="images/carousel-1/Motivation_des_employés.png">
+                    </p>
+                    <p class="card item">
+                        <img src="images/carousel-1/Impact_de_la_covid19_sur_la_performance_financiere_des_entreprises_publiques_oikonomia2022.png">
+                    </p>
+                    <p class="card item">
+                        <img src="images/carousel-1/Rôle_de_la_femme_dans_la_publicité_et_comportant_des_consommateurs_oikonomia2022.png">
+                    </p>
+                    <p class="card item">
+                        <img src="images/carousel-1/Analyse_critique_de_la_fixation_des_prix_sur_le_petit_commerce_oikonomia2022.png">
+                    </p>
+                    <p class="card item">
+                        <img src="images/carousel-1/Acces_des_femmes_aux_emplois_formels_en_RDC_oikonomia2022.png">
+                    </p>
+                    <p class="card item">
+                        <img src="images/carousel-1/LES_PRATIQUES_DE_L’e-GESTION_DES_RESSOURCES_HUMAINES_ET_PERFORMANCE_SOCIALE_DES_ENTREPRISES_MINIÈRES_DU_LUALABA_EN_RDC_oikonomia2022.png">
+                    </p>
+                </div>
+                <!-- <div class="container owl-carousel-art owl-theme">
                     <p class="card item">
                         <img src="images/carousel-1/card5.jpg">
                     </p>
@@ -133,7 +133,7 @@
                     <p class="card item">
                         <img src="images/carousel-1/card3.jfif">
                     </p>
-                </div>
+                </div> -->
             </article>
             <article class="third-article">
                 <div> 
@@ -279,7 +279,7 @@
                 <div class="overlay"></div>
                 <div class="modales" role="dialog" aria-label="boite-modale">
                     <h1 class="close-modal toggle-modal" aria-label="close-modal">&#10006;</h1>
-                    <h1 class="heading">Contactez-nous</h1>
+                    <h1 class="heading">Nous contacter</h1>
                     <form action="traitementForm.php" method="post">
                         <input type="text" placeholder="Votre nom complet" class="box" required>
                         <input type="email" placeholder="Votre e-mail" class="box" required>
