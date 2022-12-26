@@ -2,10 +2,14 @@ function headerScript() {
     var deroulant = document.querySelector('.sub-btn');
     var list_deroulant = document.querySelector('.sub-menu');
 
-    deroulant.addEventListener('click', ()=> {
-        list_deroulant.classList.toggle('active')
-    });
+    if (deroulant != undefined) {
 
+        deroulant.addEventListener('click', ()=> {
+            list_deroulant.classList.toggle('active')
+        });
+    
+    }
+   
     // javascript pour une nav responsive 
 
     var menu = document.querySelector('.menu');
