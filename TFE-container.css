@@ -128,12 +128,12 @@ body {
 .menu-btn {
     font-size: inherit;
     margin-left: 10px;
-    width: 3.17em;
-    height: 2.92em;
+    width: 3.15em;
+    height: 2.8em;
 }
 
 .bar {
-    width: 2.5em;
+    width: 2em;
     height: 0.33em;
 }
 
@@ -150,7 +150,7 @@ body {
 }
 
 .bar::before, .bar::after {
-    width: 3em;
+    width: 2.5em;
     height: 0.33em;
 }
 
@@ -297,12 +297,11 @@ body {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
-    height: -webkit-max-content;
-    height: -moz-max-content;
-    height: max-content;
+    height: 50vh;
     width: 100%;
     font-size: 15px;
     padding: 30px;
+    text-align: center;
 }
 
 .erreur-board.active {
@@ -469,7 +468,7 @@ body {
 }
 
 .footer-description p {
-    font-size: inherit;
+    font-size: 1.2em;
     font-family: inherit;
 }
 
